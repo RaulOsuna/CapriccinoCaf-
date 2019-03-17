@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ADMINISTRACIONComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { 
+   if (window.localStorage.getItem("usuario")==null ||window.localStorage.getItem("usuario")==undefined ) {
+     window.location.href="/inicio";
+   }
+  }
 
   ngOnInit() {
   }
